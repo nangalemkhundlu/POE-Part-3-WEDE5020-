@@ -1,0 +1,82 @@
+
+
+# WEB5020 - Assignment Part 2
+
+Welcome to the repository for **Assignment Part 2** of the **WEB5020** module. This project builds upon foundational web development concepts, focusing on enhanced styling, layout structure, and responsive design features.
+
+---
+
+## 🚀 Project Overview
+
+This web project includes customized stylesheets, image assets, and documentation outlining the development progress.
+
+### 📂 Repository Structure
+
+```text
+N.Mkhundlu-WEB5020-Assignment-Part-2-main/
+│
+├── CSS/
+│   └── style.css          # Main stylesheet for layout and design
+├── IMAGES/                # Directory for project images and graphics
+│   ├── Car-infographic.jpg
+│   └── ...                # Other visual assets
+├── Changelog              # Record of project updates and version history
+└── README.md              # Project documentation
+
+```
+
+---
+
+## 🛠️ Built With
+
+* **HTML5** – Semantic structure of web pages
+* **CSS3** – Styling, layout design, and responsive elements
+* **Git & GitHub** – Version control and repository management
+
+---
+
+## ⚙️ Getting Started
+
+To view or run this project locally on your machine, follow these simple steps:
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/your-username/N.Mkhundlu-WEB5020-Assignment-Part-2.git
+
+```
+
+
+2. **Navigate to the project directory:**
+```bash
+cd N.Mkhundlu-WEB5020-Assignment-Part-2-main
+
+```
+
+
+3. **Open the project:**
+* Open the main HTML file in your preferred web browser, or launch it using an IDE like **Visual Studio Code**.
+
+
+
+---
+
+## 📝 Features & Enhancements
+
+* **Responsive Design:** Styled to adapt cleanly across various screen sizes.
+* **Custom Styling:** Main stylesheet (`style.css`) structured for maintainability and visual hierarchy.
+* **Infographics & Assets:** Integrated visual aids and custom images to enhance content delivery.
+
+---
+
+## 👤 Author
+
+* **N. Mkhundlu**
+* **Module:** WEB5020
+
+References
+
+GitHub
+Visual Studio Code
+HTML5
+W3School 
+Lecturer's website prototype 
