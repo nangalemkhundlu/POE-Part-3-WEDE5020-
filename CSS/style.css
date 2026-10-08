@@ -790,3 +790,37 @@ a {
         font-size: 24px;
     }
 }
+
+
+/* Hide error messages by default */
+.error-message {
+    display: none;
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
+
+/* Display error message when active */
+.error-message.visible {
+    display: block;
+}
+
+/* Red border on invalid input elements */
+input.error, select.error, textarea.error {
+    border: 1px solid #e74c3c;
+}
+
+/* Form success alert */
+.form-status {
+    display: none;
+    padding: 12px;
+    margin-bottom: 16px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+}
+
+.form-status.success {
+    display: block;
+}
