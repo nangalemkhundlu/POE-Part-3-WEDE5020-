@@ -824,3 +824,26 @@ input.error, select.error, textarea.error {
 .form-status.success {
     display: block;
 }
+
+
+
+/* Hide error messages by default */
+.error-message {
+    display: none;
+    color: #ff4d4d;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* Show error message when JS adds 'visible' */
+.error-message.visible {
+    display: block;
+}
+
+/* Only turn inputs red when JS adds the 'error' class */
+input.error, 
+select.error, 
+textarea.error {
+    border-color: #ff4d4d !important;
+}
+

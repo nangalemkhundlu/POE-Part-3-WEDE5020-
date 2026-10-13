@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENQUIRY</title>
-      <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- JavaScript -->
+    <script src="../javascript/main.js" defer></script>
+    <script src="../javascript/lightbox.js" defer></script>
+    <script src="../javascript/search.js" defer></script>
+    <script src="../javascript/validation.js" defer></script>
 </head>
 <body>
-      <!-- Add this inside your <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <header class="site-header">
     <div class="container header-inner">
         <a href="index.html" class="brand">
             <img src="../IMAGES/ChatGPT Image Sep 7, 2026, 10_57_08 AM.png" alt="Sisonke Auto Care Logo">
         </a>
-          <a class="brand" href="index.html">Sisonke Auto Care</a>
+        <a class="brand" href="index.html">Sisonke Auto Care</a>
 
         <nav class="site-nav" aria-label="Main navigation">
             <a href="../index.html">Home</a>
@@ -24,127 +29,91 @@
             <a href="../PAGES/enquiry.html">Enquiry</a>
             <a href="../PAGES/contactus.html">Contact</a>
         </nav>
-
     </div>
 </header>
 
-   <main>
+<main>
+    <section class="page-title">
+        <h2>Make an Enquiry</h2>
+        <p>Request a quotation or book a service with Sisonke Auto Care.</p>
+    </section>
 
-<section class="page-title">
-    <h2>Make an Enquiry</h2>
- <!-- <P> be centered below <h2> -->  <p>Request a quotation or book a service with Sisonke Auto Care.</p>
-</section>
+    <section class="form-section">
+        <div class="form-container">
+            <!-- Added id="contactForm" and id="formStatus" -->
+            <form id="contactForm" action="#" method="post">
+                <div id="formStatus" class="form-status"></div>
 
-<section class="form-section">
-    <div class="form-container">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="Enter your first name">
+                    <span id="firstNameError" class="error-message">First name must be at least 3 characters.</span>
+                </div>
 
-        <form action="#" method="post">
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" placeholder="Enter your last name">
+                    <span id="lastNameError" class="error-message">Last name must be at least 3 characters.</span>
+                </div>
 
-            <!-- First Name and Last Name stacked vertically -->
-            <div class="form-group">
-                <label for="first-name">First Name</label>
-                <input 
-                    type="text" 
-                    id="first-name" 
-                    name="first_name" 
-                    placeholder="Enter your first name"
-                    required
-                >
-            </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com">
+                    <span id="emailError" class="error-message">Please enter a valid email address.</span>
+                    <small class="form-text">We'll never share your email with anyone else.</small>
+                </div>
 
-            <div class="form-group">
-                <label for="last-name">Last Name</label>
-                <input 
-                    type="text" 
-                    id="last-name" 
-                    name="last_name" 
-                    placeholder="Enter your last name"
-                    required
-                >
-            </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                    <span id="phoneError" class="error-message">Please enter a valid phone number.</span>
+                </div>
 
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    placeholder="example@domain.com"
-                    required
-                >
-                <small class="form-text">We'll never share your email with anyone else.</small>
-            </div>
+                <div class="form-group">
+                    <label for="vehicle">Vehicle Make & Model</label>
+                    <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Toyota Corolla">
+                    <span id="vehicleError" class="error-message">Please enter your vehicle make and model.</span>
+                </div>
 
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
-                    placeholder="123-456-7890"
-                    required
-                >
-            </div>
+                <div class="form-group">
+                    <label for="service">Select Service</label>
+                    <select id="service" name="service">
+                        <option value="">-- Select a Service --</option>
+                        <option value="servicing">Vehicle Servicing</option>
+                        <option value="brakes">Brake Repairs</option>
+                        <option value="diagnostics">Engine Diagnostics</option>
+                        <option value="maintenance">General Maintenance</option>
+                    </select>
+                    <span id="serviceError" class="error-message">Please select a service.</span>
+                </div>
 
-            <div class="form-group">
-                <label for="vehicle">Vehicle Make & Model</label>
-                <input 
-                    type="text" 
-                    id="vehicle" 
-                    name="vehicle" 
-                    placeholder="e.g. Toyota Corolla"
-                >
-            </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your vehicle or the service you need..."></textarea>
+                    <span id="messageError" class="error-message">Message must be at least 10 characters long.</span>
+                </div>
 
-            <div class="form-group">
-                <label for="service">Select Service</label>
-                <select id="service" name="service" required>
-                    <option value="">-- Select a Service --</option>
-                    <option value="servicing">Vehicle Servicing</option>
-                    <option value="brakes">Brake Repairs</option>
-                    <option value="diagnostics">Engine Diagnostics</option>
-                    <option value="maintenance">General Maintenance</option>
-                </select>
-            </div>
 
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea 
-                    id="message" 
-                    name="message"
-                    rows="4"
-                    placeholder="Tell us about your vehicle or the service you need..."
-                ></textarea>
-            </div>
+                <div class="form-group-checkbox">
+                    <label>
+                        <input type="checkbox" id="terms" name="terms">
+                        I agree to the terms and conditions and privacy policy.
+                    </label>
+                    <span id="termsError" class="error-message">You must agree to the terms.</span>
+                </div>
 
-            <div class="form-group-checkbox">
-                <label>
-                    <input type="checkbox" name="terms" required> 
-                    I agree to the terms and conditions and privacy policy.
-                </label>
-            </div>
-
-            <button type="submit" class="submit-btn">
-                Submit Enquiry 
-            </button>
-
-        </form>
-
-    </div>
-</section>
-
+                <button type="submit" class="submit-btn">
+                    Submit Enquiry
+                </button>
+            </form>
+        </div>
+    </section>
 </main>
-
-<!-- Add this inside your <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 
 <!-- FOOTER -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-content">
-
-            <!-- About -->
             <div class="footer-section">
                 <h3>Sisonke Auto Care</h3>
                 <p>
@@ -153,7 +122,6 @@
                 </p>
             </div>
 
-           <!-- Quick Links -->
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
@@ -190,7 +158,6 @@
                 </ul>
             </div>  
             
-            <!-- Contact Us -->
             <div class="footer-section">
                 <h3>Contact Us</h3>
                 <ul class="footer-links">
@@ -215,7 +182,6 @@
                 </ul>
             </div>
 
-            <!-- Follow Us -->
             <div class="footer-section">
                 <h3>Follow Us</h3>
                 <ul class="footer-links">
@@ -233,12 +199,13 @@
                     </li>
                 </ul>
             </div>
-
         </div>
 
-        <!-- Copyright -->
         <div class="footer-bottom">
             <p>&copy; 2026 Sisonke Auto Care. All Rights Reserved.</p>
         </div>
     </div>
 </footer>
+
+</body>
+</html>
