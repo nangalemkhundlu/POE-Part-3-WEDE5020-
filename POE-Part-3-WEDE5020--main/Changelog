@@ -1,0 +1,27 @@
+Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on Keep a Changelog,
+and this project adheres to Semantic Versioning.
+
+[2.0.0] - 2026-06-06 (Assignment Part 2)
+Added
+New custom stylesheets in the CSS/ directory (style.css) to handle advanced layout structures.
+
+Integration of visual assets and graphics in the IMAGES/ directory, including infographics (Car-infographic.jpg).
+
+Enhanced responsive design rules to improve viewing across mobile and desktop screens.
+
+Changed
+Refactored structural HTML/CSS hierarchy for better accessibility and readability.
+
+Updated layout sections to meet specific project requirements for Assignment Part 2.
+
+Fixed
+Resolved minor alignment and padding issues on smaller viewports.
+
+[1.0.0] - 2026-05-01 (Assignment Part 1)
+Added
+Initial repository setup and directory structure (CSS/, IMAGES/).
+
+Basic HTML markup and foundational styling.
